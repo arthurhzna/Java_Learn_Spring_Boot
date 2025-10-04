@@ -1,5 +1,6 @@
 
 .metadata/
+.vscode/
 
 .mvn/
 .mvn/wrapper/
