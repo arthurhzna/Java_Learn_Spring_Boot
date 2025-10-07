@@ -64,8 +64,8 @@ public class PrePostAnnotationsContextLauncherApplication {
 				new AnnotationConfigApplicationContext
 					(PrePostAnnotationsContextLauncherApplication.class)) {
 			
-			Arrays.stream(context.getBeanDefinitionNames())
-				.forEach(System.out::println);
+			// Arrays.stream(context.getBeanDefinitionNames())
+			// 	.forEach(System.out::println);
 
 		}
 	}
