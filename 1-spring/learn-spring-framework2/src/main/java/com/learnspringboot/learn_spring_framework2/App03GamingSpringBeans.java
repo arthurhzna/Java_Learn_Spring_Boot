@@ -34,9 +34,12 @@ public class App03GamingSpringBeans {
 				new AnnotationConfigApplicationContext
 					(App03GamingSpringBeans.class)) {
 
-			context.getBean(GamingConsole.class).up();
+			// context.getBean(GamingConsole.class).up();
+			// System.out.println(context.getBean(GamingConsole.class));
+
 			
 			context.getBean(GameRunner.class).run();
+
 
 		}
 	}

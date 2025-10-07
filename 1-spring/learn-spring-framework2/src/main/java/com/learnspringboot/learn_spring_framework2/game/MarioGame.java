@@ -1,5 +1,11 @@
 package com.learnspringboot.learn_spring_framework2.game;
 
+import org.springframework.stereotype.Component;
+
+import org.springframework.context.annotation.Primary;
+
+@Component
+@Primary
 public class MarioGame implements GamingConsole{
 	
 	public void up() {
