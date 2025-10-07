@@ -7,6 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 interface DataService {
     int[] retrieveData();
@@ -14,6 +16,7 @@ interface DataService {
 
 @Component
 @Primary
+@Repository
 class MySQLDataService implements DataService {
 
     @Override
@@ -23,6 +26,7 @@ class MySQLDataService implements DataService {
 }
 
 @Component
+@Repository
 class MongoDBDataService implements DataService {
     @Override
     public int[] retrieveData() {
@@ -31,6 +35,7 @@ class MongoDBDataService implements DataService {
 }
 
 @Component
+@Service
 class BusinessCalculationService {
 
     private DataService dataService;
