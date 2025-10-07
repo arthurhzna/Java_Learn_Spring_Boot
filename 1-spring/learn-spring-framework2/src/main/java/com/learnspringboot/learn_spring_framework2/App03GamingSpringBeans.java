@@ -6,34 +6,33 @@ import com.learnspringboot.learn_spring_framework2.game.GamingConsole;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.learnspringboot.learn_spring_framework2.game.PacmanGame;
 
+
 @Configuration
-class GamingConfiguration {
-
-	@Bean
-	public GamingConsole game1() {
-		var game = new PacmanGame();
-		return game;
-	}
-
-	@Bean
-	public GameRunner gameRunner(GamingConsole game1) {
-		var gameRunner = new GameRunner(game1);
-		return gameRunner;
-	}
-
-}
-
-
+@ComponentScan("com.learnspringboot.learn_spring_framework2.game")
 public class App03GamingSpringBeans {
+
+	// @Bean
+	// public GamingConsole game1() {
+	// 	var game = new PacmanGame();
+	// 	return game;
+	// }
+
+	// @Bean
+	// public GameRunner gameRunner(GamingConsole game1) {
+	// 	System.out.println(game1);
+	// 	var gameRunner = new GameRunner(game1);
+	// 	return gameRunner;
+	// }
 
 	public static void main(String[] args) {
 
 		try (var context = 
 				new AnnotationConfigApplicationContext
-					(GamingConfiguration.class)) {
+					(App03GamingSpringBeans.class)) {
 
 			context.getBean(GamingConsole.class).up();
 			
