@@ -1,6 +1,7 @@
 package com.learnspringboot.learn_spring_framework;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import java.util.Arrays;
 
 public class App02HelloWorldSpring {
 
@@ -10,22 +11,27 @@ public class App02HelloWorldSpring {
 
         var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 
-        System.out.println(context.getBean("name"));
+        // System.out.println(context.getBean("name"));
 
-        System.out.println(context.getBean("person"));
+        // System.out.println(context.getBean("person"));
 
-        System.out.println(context.getBean("Address2"));
+        // System.out.println(context.getBean("Address2"));
 
-        System.out.println(context.getBean(Address.class));
+        // System.out.println(context.getBean(Address.class));
 
-        System.out.println(context.getBean("person2callmethod"));
+        // System.out.println(context.getBean("person2callmethod"));
 
-        System.out.println("Person2 call method");
+        // System.out.println("Person2 call method");
 
-        System.out.println(context.getBean(Person.class));
+        // System.out.println(context.getBean(Person.class));
 
-        System.out.println(context.getBean("personCostum"));
+        // System.out.println(context.getBean("personCostum"));
 
+
+        // Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.println(context.getBean("address2qualifier"));
+        System.out.println(context.getBean(Person2.class));
 
 
 

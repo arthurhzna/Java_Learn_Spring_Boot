@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.test;
+package com.learnspringboot.learn_spring_framework.test;
 
 import java.io.Serializable;
 

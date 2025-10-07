@@ -2,6 +2,8 @@ package com.learnspringboot.learn_spring_framework;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 
 record Person(String name, int age ) {}
@@ -34,9 +36,9 @@ public class HelloWorldConfiguration {
     // }
 
     @Bean(name = "Address2")
+    @Primary
     public Address Address() {
-        var address = new Address("Ness", "Surabaya");
-        return address;
+        return new Address("Ness", "Surabaya");
     }
 
     @Bean
@@ -47,6 +49,18 @@ public class HelloWorldConfiguration {
     @Bean
     public Person2 personCostum(String name, Address address) {
         return new Person2(name, address);
+    }
+
+    @Bean
+    @Primary
+    public Person2 person2callmethod2() {
+        return new Person2("Arthur Hozanna", new Address("Ness", "Surabaya"));
+    }
+
+    @Bean
+    @Qualifier("address2qualifier")
+    public Address address2qualifier() {
+        return new Address("Ness", "Surabaya");
     }
 
 
