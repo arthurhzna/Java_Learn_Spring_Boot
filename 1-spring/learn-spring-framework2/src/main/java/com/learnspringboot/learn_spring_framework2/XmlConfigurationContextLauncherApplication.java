@@ -35,6 +35,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 // }
 
+import com.learnspringboot.learn_spring_framework2.game.GameRunner;
+
 public class XmlConfigurationContextLauncherApplication {
 	
 	public static void main(String[] args) {
@@ -49,7 +51,7 @@ public class XmlConfigurationContextLauncherApplication {
 			
 			System.out.println(context.getBean("age"));
 			
-			// context.getBean(GameRunner.class).run();
+			context.getBean(GameRunner.class).run();
 
 		}
 	}

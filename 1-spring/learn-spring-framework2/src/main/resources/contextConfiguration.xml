@@ -20,7 +20,7 @@
  	
  	<bean id="gameRunner" 
  		class="com.learnspringboot.learn_spring_framework2.game.GameRunner">
- 		<constructor-arg ref="game" />
+ 		<constructor-arg ref="game" /> <!-- ref: argument constructor -->
  	</bean>
  	
 </beans>
