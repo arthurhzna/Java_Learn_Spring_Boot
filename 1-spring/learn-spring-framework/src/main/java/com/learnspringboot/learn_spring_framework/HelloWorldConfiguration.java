@@ -37,7 +37,7 @@ public class HelloWorldConfiguration {
 
     @Bean(name = "Address2")
     @Primary
-    public Address Address() {
+    public Address Address1() {
         return new Address("Ness", "Surabaya");
     }
 
