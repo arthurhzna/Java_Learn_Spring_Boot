@@ -25,8 +25,12 @@ public class SayHelloController {
 		sb.append("My first html page with body - Changed");
 		sb.append("</body>");
 		sb.append("</html>");
-		
 		return sb.toString();
+	}
+
+	@RequestMapping("say-hello-jsp")	
+	public String sayHelloJsp() {
+		return "sayHello";
 	}
 }
 
