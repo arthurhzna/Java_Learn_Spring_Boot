@@ -1,0 +1,12 @@
+.gradle
+build
+target
+*.class
+*.log
+*.jar
+*.war
+.git
+.gitignore
+README.md
+HELP.md
+gradle.properties
