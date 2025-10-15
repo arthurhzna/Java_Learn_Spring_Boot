@@ -39,7 +39,7 @@ public class BasicAuthSecurityConfiguration {
 							session.sessionCreationPolicy(
 									SessionCreationPolicy.STATELESS)
 						);
-		
+		 
 		//http.formLogin();
 		http.httpBasic(withDefaults());
 
@@ -68,7 +68,7 @@ public class BasicAuthSecurityConfiguration {
 //				.roles("ADMIN")
 //				.build();
 //
-//		return new InMemoryUserDetailsManager(user, admin);
+//		return new InMemoryUserDetailsManager(user, admin); <--- ini in memory bukan dari database
 //	}
 	
 	@Bean
